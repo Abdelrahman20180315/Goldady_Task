@@ -15,7 +15,7 @@ class UserController extends Controller
     public function redirects()
     { if(Auth::id())
         {
-            if(auth()->user()->usertype == '1')
+            if(Auth::user()->usertype == '1')
             {
                 $users = User::all();
                 return view('Admins.users',compact('users'));
