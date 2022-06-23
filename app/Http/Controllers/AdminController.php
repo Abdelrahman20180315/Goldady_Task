@@ -166,7 +166,7 @@ class AdminController extends Controller
         ->OrWhere('bar_type','LIKE','%'.$request->search.'%')
         ->OrWhere('volt_name','LIKE','%'.$request->search.'%')
         ->OrWhere('volt_country','LIKE','%'.$request->search.'%')
-        ->OrWhere('volt_type','LIKE','%'.$request->search.'%');
+        ->OrWhere('volt_type','LIKE','%'.$request->search.'%')->get();
         return view('Admins.admin_show_bar_volt',compact('data'));
     }
 
